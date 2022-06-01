@@ -1,11 +1,22 @@
 h1{
     text-align: center;
     color: blue;
-    background-color: aquamarine;
+    background-color: lightblue;
     padding: 5px;
 }
 
 .row{
     text-align: center;
     padding: 1rem;
+}
+h3{
+    text-align: center;
+}
+*{
+    margin: 0;
+    background-color: whitesmoke;
+    color: black;
+}
+button:hover{
+    background-color: gray;
 }

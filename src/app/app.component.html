@@ -1,14 +1,16 @@
 <h1>{{ title }}</h1>
 <div class="container">
   <div class="row">
-    <input type="text" class="inp" #inpval />
+    <input type="text" class="inp" #inpval  /> &nbsp;
     <button (click)="onAdd(inpval.value)" class="btn btn-primary">
       Add To list
     </button>
   </div>
 </div>
 
-<div class="container">
+
+
+<div class="container"  *ngIf="todoList.length>0;else nolistref">
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -35,5 +37,14 @@
         <td *ngIf="todo.id ==='three' ">{{todo.val}} &nbsp;&nbsp;&nbsp; <button class="btn btn-danger" (click)="delTodo(i)" >Delete</button> </td>
       </tr>
     </tbody>
+  
+  
   </table>
+ 
+
+ 
 </div>
+<ng-template #nolistref>
+  <h3>No Todo Is Created</h3>
+</ng-template>
+ 
