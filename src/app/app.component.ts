@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +7,14 @@ import { Component, ElementRef } from '@angular/core';
 })
 export class AppComponent {
   title = 'TODO WORK CONTROL';
-  inpval ='bngfbf'
+  @ViewChild('inpval')  vals:ElementRef;
   
   todoList: { id: string; val: string }[] = [];
   ongoinglist: { id: string; val: string }[] = [];
 
   onAdd(todo: string) {
     todo !== '' ? this.todoList.push({ id: 'one', val: todo }) : null;
-   
+   (this.vals.nativeElement.value = '')
   }
   
   movetoOngoing(sd: any) {
