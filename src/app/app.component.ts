@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'TODO WORK STATUS';
+  title = 'TODO WORK CONTROL';
   todoList: { id: string; val: string }[] = [];
   ongoinglist: { id: string; val: string }[] = [];
 
