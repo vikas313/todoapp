@@ -13,7 +13,7 @@ export class AppComponent {
   ongoinglist: { id: string; val: string }[] = [];
 
   onAdd(todo: string) {
-    todo !== '' ? this.todoList.push({ id: 'one', val: todo }) : null;
+    todo !== '' ? this.todoList.push({ id: 'one', val: todo }) : alert("empty TODO won't work here!!");
    (this.vals.nativeElement.value = '')
   }
   
