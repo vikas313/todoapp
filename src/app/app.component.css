@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    color: blue;
+    background-color: aquamarine;
+    padding: 5px;
+}
+
+.row{
+    text-align: center;
+    padding: 1rem;
+}
