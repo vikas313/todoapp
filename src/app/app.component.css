@@ -4,19 +4,17 @@ h1{
     background-color: lightblue;
     padding: 5px;
 }
-
-.row{
-    text-align: center;
-    padding: 1rem;
-}
-h3{
-    text-align: center;
-}
 *{
     margin: 0;
     background-color: whitesmoke;
     color: black;
 }
-button:hover{
-    background-color: gray;
+
+.active{
+    background-color: aliceblue;
+    color: blue;
+    text-decoration: underline;
+}
+.vikas{
+    text-align: center;
 }

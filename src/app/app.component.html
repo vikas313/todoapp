@@ -1,50 +1,7 @@
 <h1>{{ title }}</h1>
-<div class="container">
-  <div class="row">
-    <input type="text" class="inp" #inpval  /> &nbsp;
-    <button (click)="onAdd(inpval.value)" class="btn btn-primary">
-      Add To list
-    </button>
-  </div>
+<div class="vikas">
+    <a routerLink="addtodo" routerLinkActive="active" >CreateToDo</a>&nbsp;
+    <a routerLink="history" routerLinkActive="active"  >History</a>
 </div>
 
-
-
-<div class="container"  *ngIf="todoList.length>0;else nolistref">
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>SL.NO</th>
-        <th>NEW TODO</th>
-        <th>ONGOING</th>
-        <th>COMPLETED</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let todo of todoList; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td *ngIf="todo.id === 'one'; else elref">
-          {{ todo.val }} &nbsp;&nbsp;&nbsp;
-          <button class="btn btn-primary" (click)="movetoOngoing(i)">MOVE TO ONGOING</button>
-        </td>
-        <ng-template #elref>
-          <td></td>
-        </ng-template>
-        <td *ngIf="todo.id === 'two';else elref2">
-          {{ todo.val }} &nbsp;&nbsp;&nbsp;<button class="btn btn-success" (click)="moveDone(i)">Done</button>
-        </td>
-        <ng-template #elref2 > <td></td> </ng-template>
-        <td *ngIf="todo.id ==='three' ">{{todo.val}} &nbsp;&nbsp;&nbsp; <button class="btn btn-danger" (click)="delTodo(i)" >Delete</button> </td>
-      </tr>
-    </tbody>
-  
-  
-  </table>
- 
-
- 
-</div>
-<ng-template #nolistref>
-  <h3>No Todo Is Created</h3>
-</ng-template>
- 
+<router-outlet></router-outlet>
